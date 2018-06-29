@@ -1,0 +1,236 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+/* FONTS
+*******************/
+@font-face {
+	font-family: "Akronim";
+	src: url('../fonts/Akronim/Akronim-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Cherry_Swash";
+	src: url('../fonts/Cherry_Swash/CherrySwash-Regular.ttf') format('truetype');
+}
+/* COLORS
+*******************/
+.txtBlue { color: #4285f4; }
+.txtRed { color: #f00; }
+.txtOrange { color: #fbbc05; }
+.txtGreen { color: #83eb4e; }
+.txtYellow { color: #f8fe0a; }
+.bgBlue { background-color: #4285f4; }
+.bgRed { background-color: #ea4335; }
+.bgOrange { background-color: #fbbc05; }
+.bgGreen { background-color: #83eb4e; }
+body {
+	background-color: yellow;
+
+}
+/* HEADER
+*******************/
+header {
+	padding: 35px 0 10px;
+	background-color: #000;
+	text-align: center;
+	
+}
+.logo {
+	margin: 15px auto;
+	width: 40px;
+	display: block;
+	border-radius: 50%;
+	background-color: #f8fe0a;
+	box-shadow: 0 0 4px 8px #f00,
+				0 0 8px 16px #4285f4,
+				0 0 16px 32px #83eb4e;
+	margin-bottom: 50px;
+}
+header h1 {
+	display: inline-block;
+	font-family: Akronim;
+	color: #f8fe0a;
+	font-size: 2.5em;
+	max-width: 90%;
+	padding-top: .5em;
+}
+header h1 span {
+	font-family: Akronim;
+}
+.leftScore {
+	position: absolute;
+	left: 30px;
+	float: left;
+	color: white;
+	font-size: .8em;
+	font-size: .8em;
+	font-family: Cherry_Swash;
+}
+.rightScore {
+	position: absolute;
+	text-align: right;
+	color: white;
+	right: 30px;
+	width: 300px;
+	font-size: .8em;
+	font-family: Cherry_Swash;
+	
+}
+/* MAIN CONTENT
+*******************/
+main {
+	height: 100%;
+}
+.imgs {
+	padding: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.image {
+	width: 48%;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 1px black;
+	margin: 1%;
+	height: 100%;
+	max-width: 220px;
+}	
+.container {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+.hide {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s, visibility 1s, ease-in-out;
+}
+
+/* FOOTER
+*******************/
+footer {
+
+}
+/* WELCOME MESSAGE
+*******************/
+.popup {
+	top: 30vh;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.welcome {
+	background: white ;
+	position: absolute;
+	height: auto;	
+	margin: 0 auto;
+	width: 90%;
+	height: auto;
+	text-align: center;
+	box-shadow: 0px 0px 50px 10px orange;
+	border-radius: 5%;
+	transition: visibility 1s, opacity 1s ease-in-out;
+}
+.welcome h1{
+	margin-top: 10px;
+	padding: 10px;
+
+}
+.welcome span {
+	position: absolute;
+	background-color: red;
+	left: 15px;
+	top: -15px;
+	padding: 10px;
+	border: none;
+	border-radius: 10%;
+}
+.welcome span:hover {
+	transform: scale(1.2);
+	transition: transform 1s;
+}
+.rules {
+	width: 300px;
+	max-width: 100%;
+}
+/* RESET BUTTON
+*******************/
+.flexBox {
+	display: flex;
+	justify-content: center;
+}
+.resetButton {
+
+}
+.btn {
+	display: inline-block;
+	font-family: Akronim;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	padding: .3rem 3rem;
+	font-size: 2rem;
+	border-radius: 0.25rem;
+	transition: all 0.15s ease-in-out;
+	color: yellow;
+  	background-color: #f00;
+  	border-color: #dc3545;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+.btn:hover {
+  color: yellow;
+  background-color: #000;
+  border-color: #bd2130;
+}
+/* ANIMATIONS
+*******************/
+.animate {
+	animation-name: animate;
+	animation-duration: .5s;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes animate {
+	80% {
+		transform: scale(1.2);
+		box-shadow: 0 0 5px 2px yellow;
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.winAnimate {
+	animation-name: winAnimate;
+	animation-duration: .5s;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes winAnimate {
+	80% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.gameWinner {
+	animation-name: gameWinner;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes gameWinner {
+	80% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

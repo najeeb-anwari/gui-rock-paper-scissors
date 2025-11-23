@@ -234,3 +234,54 @@ footer {
 		transform: scale(1);
 	}
 }
+/* BATTLE ARENA */
+.battle-arena {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+	min-height: 150px;
+}
+
+.move-display {
+	text-align: center;
+	width: 150px;
+	margin: 0 20px;
+}
+
+.move-display h3 {
+	font-family: 'Cherry_Swash', sans-serif;
+	color: white;
+	margin-bottom: 10px;
+	text-shadow: 2px 2px 4px #000;
+}
+
+.move-display img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 5px solid white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	transition: all 0.3s ease;
+}
+
+.move-display img.placeholder {
+	opacity: 0.8;
+	border: 5px solid #ccc;
+	filter: grayscale(100%);
+}
+
+.vs {
+	font-family: 'Akronim', cursive;
+	font-size: 3em;
+	color: #f8fe0a;
+	text-shadow: 2px 2px 4px #f00;
+}
+
+/* SELECTED STATE */
+.image.selected {
+	border: 5px solid #f8fe0a;
+	transform: scale(1.1);
+	box-shadow: 0 0 15px #f8fe0a;
+}
